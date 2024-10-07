@@ -64,9 +64,9 @@ fi
 # 安装依赖项、cron并关闭防火墙或放行端口
 case $OS in
     ubuntu|debian)
-        sudo apt update
-        sudo apt upgrade -y
-        sudo apt install -y curl socat git cron
+        apt update
+        apt upgrade -y
+        apt install -y curl socat git cron
         if [ "$FIREWALL_OPTION" -eq 1 ]; then
             if command -v ufw >/dev/null 2>&1; then
                 sudo ufw disable
